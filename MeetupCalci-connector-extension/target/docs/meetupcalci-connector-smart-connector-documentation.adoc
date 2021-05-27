@@ -1,0 +1,48 @@
+:toc:               left
+:toc-title:         MeetupCalci-Connector Smart Connector Module
+:toclevels:         2
+:last-update-label!:
+:docinfo:
+:source-highlighter: coderay
+:icons: font
+
+
+= MeetupCalci-Connector Smart Connector Module Documentation Reference
+
++++
+This module relies in runtime provided components
++++
+
+
+== Configurations
+
+== Operations
+
+[[samplecalci]]
+=== Samplecalci
+`<module-meetupcalci-connector:samplecalci>`
+
++++
+just to perform addition logic
++++
+
+==== Parameters
+[cols=".^20%,.^20%,.^35%,.^20%,^.^5%", options="header"]
+|======================
+| Name | Type | Description | Default Value | Required
+| NUM1 a| Number |  |  +++#[attributes.queryParams.number1]+++ | {nbsp}
+| Num2 a| Number |  |  +++#[attributes.queryParams.number2]+++ | {nbsp}
+| Target Variable a| String |  +++The name of a variable on which the operation's output will be placed+++ |  | {nbsp}
+| Target Value a| String |  +++An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable+++ |  +++#[payload]+++ | {nbsp}
+|======================
+
+==== Output
+[cols=".^50%,.^50%"]
+|======================
+| *Type* a| Number
+|======================
+
+
+
+
+

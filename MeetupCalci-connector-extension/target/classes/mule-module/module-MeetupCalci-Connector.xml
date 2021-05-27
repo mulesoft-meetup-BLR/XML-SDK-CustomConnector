@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="MeetupCalci-Connector Smart Connector"
+        prefix="module-meetupcalci-connector"
+        doc:description="This module relies in runtime provided components"
+
+        xmlns="http://www.mulesoft.org/schema/mule/module"
+        xmlns:mule="http://www.mulesoft.org/schema/mule/core"
+        xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+        xmlns:tns="http://www.mulesoft.org/schema/mule/module-meetupcalci-connector"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+           http://www.mulesoft.org/schema/mule/module http://www.mulesoft.org/schema/mule/module/current/mule-module.xsd
+           http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+           http://www.mulesoft.org/schema/mule/module-meetupcalci-connector http://www.mulesoft.org/schema/mule/module-meetupcalci-connector/current/mule-module-meetupcalci-connector.xsd">
+
+    <operation name="samplecalci" doc:description="just to perform addition logic">
+    <parameters>
+    <parameter name="num1" type="number" defaultValue="#[attributes.queryParams.number1]" displayName="NUM1"/>
+    <parameter name="num2" type="number" defaultValue="#[attributes.queryParams.number2]"/>
+    </parameters>
+        <body>
+            <mule:set-payload value="#[vars.num1 + vars.num2]"/>
+        </body>
+        <output type="number" doc:description="Payload's output"/>
+    </operation>
+ </module>
