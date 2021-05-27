@@ -1,0 +1,21 @@
+
+
+mvn archetype:generate -DarchetypeGroupId=org.mule.extensions -DarchetypeArtifactId=mule-extensions-xml-archetype -DarchetypeVersion=1.2.0 -DgroupId=org.mule.extension -DartifactId=MeetupCalci-connector-extension -Dpackage=mule-module -Dversion=1.0.0-SNAPSHOT -DextensionName="MeetupCalci-Connector"
+
+
+
+
+<distributionManagement>
+        <snapshotRepository>
+            <id>Repository</id>
+            <name>Exchange Repository</name>
+    <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/{organizationsId}/maven</url>
+            <layout>default</layout>
+        </snapshotRepository>
+        <repository>
+            <id>Repository</id>
+            <name>Exchange Repository</name>            
+            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/{organizationsId}/maven</url>
+            <layout>default</layout>
+        </repository>
+</distributionManagement>
